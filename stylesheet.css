@@ -1,0 +1,26 @@
+body{
+  color: #555;
+  margin: 0;
+}
+#header{
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+  height: 150px;
+  text-transform: uppercase;
+}
+
+#header img{
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: #555
+}
+
+#header h1{
+  position: relative;
+  top: 18px;
+  left: 10px;
+}

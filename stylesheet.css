@@ -69,7 +69,6 @@ viewport{
 
 .column {
   width: 33%;
-  height: auto;
   display: inline-block;
   vertical-align: top;
   text-align: center;

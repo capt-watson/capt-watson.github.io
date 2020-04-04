@@ -40,7 +40,9 @@ viewport{
 
 #content img{
   width: auto;
+  max-width: 100%;
   height: auto;
+}  
   
 .flex-container{
   display: flex;

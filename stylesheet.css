@@ -38,6 +38,10 @@ viewport{
   position:relative;
 }
 
+#content img{
+  width: auto;
+  height: auto;
+  
 .flex-container{
   display: flex;
   flex-direction: row;

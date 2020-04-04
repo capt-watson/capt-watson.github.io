@@ -3,7 +3,7 @@ body{
   margin: 0;
 }
 
-@viewport{
+viewport{
   width: device-width;
   zoom: 1.0;
 }

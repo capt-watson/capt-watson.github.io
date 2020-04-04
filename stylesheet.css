@@ -69,13 +69,13 @@ viewport{
 
 .column {
   width: 33%;
+  height: auto;
   display: inline-block;
   vertical-align: top;
   text-align: center;
 }
 
 #footer h4{
-  width: auto;
   color: #FFFFFF;
   text-transform: uppercase;
   letter-spacing: 0.1em;

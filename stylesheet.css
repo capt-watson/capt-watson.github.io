@@ -75,6 +75,7 @@ viewport{
 }
 
 #footer h4{
+  width: auto;
   color: #FFFFFF;
   text-transform: uppercase;
   letter-spacing: 0.1em;

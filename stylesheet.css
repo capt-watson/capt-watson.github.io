@@ -9,10 +9,11 @@ viewport{
 }
 
 #header{
+  width: auto;
   padding: 30px;
   text-align: center;
   background: #1abc9c;
-  color: white;
+  color: #FFFFFF;
   font-size: 30px;
   height: 250px;
   text-transform: uppercase;
@@ -50,15 +51,15 @@ viewport{
 }
 
 .item-1{
-  border: 1px solid black;
+  border: 1px solid #000000;
 }
 
 .item-2{
-  border: 1px solid black;
+  border: 1px solid #000000;
 }
 
 .item-3 {
-  border: 1px solid black;
+  border: 1px solid #000000;
 }
 
 #footer {
@@ -74,7 +75,7 @@ viewport{
 }
 
 #footer h4{
-  color: white;
+  color: #FFFFFF;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }

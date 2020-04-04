@@ -67,7 +67,7 @@ viewport{
 }
 
 .column {
-  min-width: 620px;
+  width: 33%;
   display: inline-block;
   vertical-align: top;
   text-align: center;

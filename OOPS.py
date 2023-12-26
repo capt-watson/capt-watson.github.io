@@ -336,32 +336,32 @@
 # student.info()
 
 
-class Student:
+# class Student:
     
-    def __init__(self):
-        self.name = "Ashish"
-        self.subs = self.subjects()
-        return
-    def show(self):
-        print("Name: ", self.name)
-        self.subs.display()
+#     def __init__(self):
+#         self.name = "Ashish"
+#         self.subs = self.subjects()
+#         return
+#     def show(self):
+#         print("Name: ", self.name)
+#         self.subs.display()
         
-    class subjects:
-        def __init__(self):
-            self.sub1 = "English"
-            self.sub2 = "Maths"
-            self.sub3 = "Science"
-            return
+#     class subjects:
+#         def __init__(self):
+#             self.sub1 = "English"
+#             self.sub2 = "Maths"
+#             self.sub3 = "Science"
+#             return
         
-        def display(self):
-            print("Subjects: ", self.sub1, self.sub2, self.sub3)
+#         def display(self):
+#             print("Subjects: ", self.sub1, self.sub2, self.sub3)
             
-S1 = Student()
+# S1 = Student()
 
-S1.show()       
+# S1.show()       
 
-import pandas as pd
+# import pandas as pd
 
-print(pd.__version__)
+# print(pd.__version__)
 
-print("Testing")
+# print("Testing")

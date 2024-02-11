@@ -1,0 +1,12 @@
+ERROR:root:division by zero
+Traceback (most recent call last):
+  File "<ipython-input-2-d716a84eb592>", line 358, in <module>
+    c = a/b
+        ~^~
+ZeroDivisionError: division by zero
+ERROR:root:invalid literal for int() with base 10: 'ab'
+Traceback (most recent call last):
+  File "<ipython-input-3-d716a84eb592>", line 357, in <module>
+    b = int(input('Enter another number: '))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'ab'

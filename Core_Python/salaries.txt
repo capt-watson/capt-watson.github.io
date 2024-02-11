@@ -1,0 +1,4 @@
+10010   Aarav Upadhyay      Lucknow     515000.00
+10020   Ranveer Upadhyay    Indore      250000.00
+10030   Sushama Upadhyay    Mumbai      350000.00
+10040   Shekhar Upadhyay    Mumbai       82450.00

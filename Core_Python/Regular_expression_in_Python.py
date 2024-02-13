@@ -146,14 +146,19 @@
 ## a[\w]* represents the word should start with 'a' and may be followed by 0 or more alphanumeric
 ## chars.
 
-# import re
+import re
 
-# str = 'an apple a day keeps the doctor away'
-# res = re.findall(r'\ba[\w]*\b', str)        
+str = 'an apple a day keeps the doctor away'
+res = re.findall(r'\ba[\w]*\b', str)        
 
-# for i in res:
-#     print(i)
-    
+for i in res:
+    print(i)
+
+#~ an
+#~ apple
+#~ a
+#~ away
+
 ## \b before and after the words in the re will retrieve only the word and not the part of the words.
 ## \b will search for words starting after a space and ending before a space.
 

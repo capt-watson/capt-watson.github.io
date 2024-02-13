@@ -11,7 +11,6 @@
 #     This is a Welcome message to the user.
 #     '''
 #     print("Welcome to Python")
-    
 # # Now call the function    
 # add(5, 10)
 # message()
@@ -63,7 +62,7 @@
 # print("Binary 1110010 = ", n)
 
 # n = int(n3)
-# print("Hexadeciaml 1c2 = ", n)
+# print("Hexadecimal 1c2 = ", n)
 
 # str = "1c2"         # string str contains a hexadecimal number
 # n = int(str, 16)    # hence base is 16. Convert str into int
@@ -81,7 +80,7 @@
 # print("Binary 1110010 = ", n)
 
 # n = int(s3, 16)
-# print("Hexadeciaml 1c2 = ", n)
+# print("Hexadecimal 1c2 = ", n)
 
 
 # a = 10
@@ -135,12 +134,12 @@
 # for i in x:
 #     print(i)
     
-# list = [10, -20, 15, 5, 'Vijay', "Mary"]        # List is mutable
+# list = [10, -20, 15, 5, 'Andrew', "Mary"]        # List is mutable
 # # print(list)
 
 # print(list[-2])
 
-# tpl = (10, -20, 15, 5, 'Vijay', "Mary")
+# tpl = (10, -20, 15, 5, 'Andrew', "Mary")
 
 # tpl[0] = 5                                        # Tuple is immutable. It is read only.
 
@@ -176,7 +175,7 @@
 # s = set(lst)                # Convert list into a set.
 # print(s)
 # print(s[0])
-# print(s[0:2])               # We cannot retrive an element using indexing or slicing operations as set data types are unordered.
+# print(s[0:2])               # We cannot retrieve an element using indexing or slicing operations as set data types are unordered.
 
 # s.update([50,60])           # We can append additional elements into the set.
 # # print(s)
@@ -202,7 +201,7 @@
 # # represents the key and the second element becomes its value. Key and value should be separated by colon ( : ) and every pair should
 # # be separated by a comma. All the elements should be enclosed inside curly brackets {}.
 
-d = {10:'Sushama', 11: 'Ashish', 12:'Akash', 13:'Aarav', 14:'Ranveer'}
+d = {10:'Sushama', 11: 'Ashish', 12:'Aakash', 13:'Aarav', 14:'Ranveer'}
 
 # d = {}          # An empty dictionary
 
@@ -222,10 +221,10 @@ d = {10:'Sushama', 11: 'Ashish', 12:'Akash', 13:'Aarav', 14:'Ranveer'}
 
 #  # Literals in Python
 
-#  # A lieral is a constant value that is stored into a variable in a program.
+#  # A literal is a constant value that is stored into a variable in a program.
 
 # a = 15      # Here 'a' is a variable into which a constant value '15' is stored. Hence, the value 15 is called 'literal' 
-            # Since 15 indicates integer value, it is called 'integar literal'.
+            # Since 15 indicates integer value, it is called 'integer literal'.
             
 #  # Types of literals in Python
 
@@ -235,7 +234,7 @@ d = {10:'Sushama', 11: 'Ashish', 12:'Akash', 13:'Aarav', 14:'Ranveer'}
 
 #  # Numeric Literals: These literals represent numbers. 
 
-#  # 450, -15                   Integar Literal   
+#  # 450, -15                   Integer Literal   
 #  # 3.14286, -10.6, 1.25E4     Float Literal   
 #  # 450, -15  0x5A1m           Hexadecimal Literal   
 #  # 0o557                      Octal Literal   
@@ -321,4 +320,3 @@ r = 15
 area = m.pi*r**2
 
 print("Area of Circle= ", area)
-

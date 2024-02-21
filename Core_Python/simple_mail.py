@@ -13,10 +13,10 @@ body = '''This is my Text email. This is sent to you from my Python program.
 msg = MIMEText(body)
 
 ## from which address the email is sent
-fromaddr = 'shekhar.00001@gmail.com'
+fromaddr = 'abcde@gmail.com'
 
 ## To which address the email is sent
-toaddr = 'capt.shekhar.upadhyay@gmail.com'
+toaddr = 'vwxyz@gmail.com'
 
 ## store the addresses into the msg object
 msg['from'] = fromaddr
@@ -41,4 +41,3 @@ print('Mail sent')
 server.quit()
 
 #~ Mail sent
-

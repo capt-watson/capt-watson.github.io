@@ -410,14 +410,14 @@
 
 ## To test whether leap year or not
 
-# from calendar import *
+from calendar import *
 
-# y = int(input('Enter year: '))
+y = int(input('Enter year: '))
 
-# if isleap(y):
-#     print(y, 'is a leap year.')
-# else:
-#     print(y, 'is not a leap year.')
+if isleap(y):
+    print(y, 'is a leap year.')
+else:
+    print(y, 'is not a leap year.')
 
 # #~  1959 is not a leap year.
 # #~  2024 is a leap year.
@@ -447,6 +447,6 @@
 
 #% note: Values of 'w', 'l', 'c' and 'm' are not compulsory
 
-from calendar import *
+# from calendar import *
 
-year = int(input('Enter year: '))
+# year = int(input('Enter year: '))

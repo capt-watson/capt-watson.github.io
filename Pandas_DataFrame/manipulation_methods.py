@@ -58,7 +58,7 @@ make.apply(generalize_top5)
 # make.apply(generalize_top5)
 #~ 23.3 ms ± 3.31 ms per loop (mean ± std. dev. of 7 runs , 10 loops each)
 
-## %%timeit
+# %%timeit
 # make.where(make.isin(top_5), other = 'Other')
 #~ 4.49 ms ± 1.94 ms per loop (mean ± std. dev. of 7 runs , 100 loops each)
 
@@ -341,7 +341,7 @@ df.replace(to_replace='z.*', value='zanne', regex=True)  ## Third method
 
 #% Using the cut function, one can create bins of equal width:
 
-pd.cut(city_mpg, 10)
+# pd.cut(city_mpg, 10)
 
 #~ 0        (5.856, 20.4]
 #~ 1        (5.856, 20.4]
@@ -359,7 +359,7 @@ pd.cut(city_mpg, 10)
 
 #% If you have specific sizes for bin edges, you can specify those. In the following example five bins are created (so you need to provide six edges):
 
-pd.cut(city_mpg, [0,10,20,40,70,150])
+# pd.cut(city_mpg, [0,10,20,40,70,150])
 
 #~ 0        (10, 20]
 #~ 1         (0, 10]
@@ -380,7 +380,7 @@ pd.cut(city_mpg, [0,10,20,40,70,150])
 
 #% One can bin data with quantiles instead. If you wanted 10 bins that had approximately the same number of entries in each bin (rather that each bin width being the same), use the qcut function:
 
-pd.qcut(city_mpg, 10)
+# pd.qcut(city_mpg, 10)
 
 #~ 0         (18.0, 20.0]
 #~ 1        (5.999, 13.0]
@@ -398,7 +398,7 @@ pd.qcut(city_mpg, 10)
 
 #% Both of these functions allow you to set the labels to use instead of the categorical intervals they generate:
 
-pd.qcut(city_mpg, 10, labels=list(range(1,11)))
+# pd.qcut(city_mpg, 10, labels=list(range(1,11)))
 
 #~ 0        7
 #~ 1        1

@@ -401,16 +401,16 @@ for i in res:
 # import urllib.request
 
 # f = urllib.request.urlopen(r'file:///C:\Users\shekh\Projects\Python_Tutorials\Core_Python\breakfast.html')
-## 'fil:///' indicates file URL scheme that is used to refer to files in the local
-## computer system.
+# 'fil:///' indicates file URL scheme that is used to refer to files in the local
+# computer system.
 
-## Next word 'f/py' indicates the drive name 'f' and the sub directory 'py'.
-## In this, we have the file breakfast.html. Once this file is open, we can read
-## the data using read() method as:
+# Next word 'f/py' indicates the drive name 'f' and the sub directory 'py'.
+# In this, we have the file breakfast.html. Once this file is open, we can read
+# the data using read() method as:
 
-## text = f.read()
+# text = f.read()
 
-## str = text.decode()  To decode HTML file byte strings data into normal strings.
+# str = text.decode()  To decode HTML file byte strings data into normal strings.
 
 #! A program to retrieve information from a HTML file using re.
 

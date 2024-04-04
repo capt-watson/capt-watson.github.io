@@ -1,0 +1,8 @@
+autopct
+barstacked
+depts
+iloc
+Mauti
+startangle
+stepfilled
+Wipro

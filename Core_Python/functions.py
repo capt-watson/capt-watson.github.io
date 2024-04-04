@@ -20,7 +20,7 @@
 #@ Returning results from a function
 
 #     ## A function doesn't return any result, we need to write
-#     ## the return statementin the body of the function.
+#     ## the return statement in the body of the function.
     
 # def sum(a, b):
 #     '''This function finds sum of 2 numbers'''

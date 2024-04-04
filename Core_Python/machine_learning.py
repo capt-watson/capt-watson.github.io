@@ -71,3 +71,4 @@ model.predict([[20000]])
 #~ array([152.11752883])
 
 #% The above prediction of 152.12 ads to achieve the sales target of 20000 TV is the outcome of the linear regression model.
+

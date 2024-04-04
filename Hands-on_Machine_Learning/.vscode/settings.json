@@ -1,0 +1,18 @@
+{
+    "cSpell.words": [
+        "fontsize",
+        "labelsize",
+        "lifesat",
+        "titlesize",
+        "xtick",
+        "ytick"
+    ],
+    "editor.scrollbar.horizontalScrollbarSize": 10,
+    "notebook.output.textLineLimit": 30,
+    "diffEditor.renderSideBySideInlineBreakpoint": 900,
+    "editor.fontSize": 14,
+    "errorLens.searchForProblemQuery": "https://google.co.in/?q=$message",
+    "cSpell.ignoreWords": [
+        "figsize"
+    ]
+}

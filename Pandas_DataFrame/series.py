@@ -1,8 +1,4 @@
-
-import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
-from pandas import DataFrame, Series
 
 # series = {
 #         'index':[0 , 1, 2, 3],
@@ -29,7 +25,6 @@ from pandas import DataFrame, Series
 #     "name": "Counts",
 # }
 
-
 # def get(series, idx):
 #     value_idx = series["index"].index(idx)  ## Search val in series dic at given index
 #     return series["data"][value_idx]
@@ -49,7 +44,7 @@ from pandas import DataFrame, Series
 
 #! Pandas Series
 
-import pandas as pd
+# import pandas as pd
 
 # songs2 = pd.Series([145,142,38,13], name='counts')
 

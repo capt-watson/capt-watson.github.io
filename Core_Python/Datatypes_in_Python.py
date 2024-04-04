@@ -1,3 +1,4 @@
+import math as m
 
 # Program with two functions
 # def add(x, y):
@@ -303,7 +304,7 @@ d = {10:'Sushama', 11: 'Ashish', 12:'Aakash', 13:'Aarav', 14:'Ranveer'}
 # else:
 #     print("One and Two values are not same")
     
-import math as m
+
 
 # x = m.sqrt(16)
 # print(x)
@@ -320,3 +321,4 @@ r = 15
 area = m.pi*r**2
 
 print("Area of Circle= ", area)
+

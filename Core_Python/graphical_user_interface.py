@@ -1247,3 +1247,4 @@ total_cols = len(lst[0])
 root = Tk()
 
 mt = MyTable(root)
+root.mainloop()         ## root.mainloop() method draws th output. No print func required.

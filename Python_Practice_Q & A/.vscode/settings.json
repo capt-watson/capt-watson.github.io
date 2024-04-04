@@ -1,0 +1,11 @@
+{
+    "cSpell.words": [
+        "dropna",
+        "dtype",
+        "fillna"
+    ],
+    "cSpell.ignoreWords": [
+        "astype",
+        "iloc"
+    ]
+}

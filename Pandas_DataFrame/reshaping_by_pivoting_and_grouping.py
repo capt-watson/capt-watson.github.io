@@ -42,17 +42,16 @@ def prep_for_ml(df):
 
 def predict_col(df, col):
     df = prep_for_ml(df)
-    ## find all columns with not any missing values
+    ## following code will take string as its arguments and return all rows of df where column col is not null.
     missing = df.query(f"~{col}.isna()")
     cat_idx = []
-    ## for type in datatypes of cols
+    ## for dtype(typ) in datatypes of cols. The i variable will store the index of the current dtype, and the typ variable will store the dtype itself.
     for i, typ in enumerate(df.drop(columns=[col]).dtypes):
         if str(typ) == "object":
             cat_idx.append(i)
             ## drop all columns without any missing values, leaving only columns with missing values
     X = missing.drop(columns=[col]).values
-            ## columns without any missing values.
-            ## X represents train data
+            ## columns without any missing values. X represents train data
     y = missing[col]
             ## y represents train label
     model = cb.CatBoostRegressor(iterations=20, cat_features= cat_idx)
@@ -119,4 +118,83 @@ def tweak_jb(jb):
     
 jb2 = tweak_jb(jb)
 
-jb2
+# jb2.pivot_table(index='country_live', columns='employment_status', values= 'age', aggfunc='mean', observed=False)
+
+## The above results can also be obtained using pd.crosstab which requires data as series rather than column names. This pd.crosstab function allows one to pick columns for the index, columns for the column and columns to aggregate. However, one can not aggregate multiple columns like pivot_table.
+
+# pd.crosstab(index=jb2.country_live, columns=jb2.employment_status, values=jb2.age, aggfunc='mean')
+
+## Following code returns DataframeGroupBy object.
+ 
+# jb2.groupby(['country_live','employment_status'],observed=True).age.mean().unstack()
+
+#^ Custom Aggregation Function
+
+# def per_emacs(ser):
+#     return ser.str.contains('Emacs').sum() / len(ser) * 100
+
+## one can use mean() method in Pandas to substitute .sum()/len(ser)
+
+def per_emacs(ser):
+    return ser.str.contains('Emacs').mean() * 100
+
+# jb2.pivot_table(index= 'country_live', values= 'ide_main', aggfunc= per_emacs, observed=True)
+
+
+# pd.crosstab(index=jb2.country_live, columns=jb2.assign(iden ='emacs_per').iden, values=jb2.ide_main,aggfunc=per_emacs)
+
+# jb2.groupby('country_live', observed=True)[['ide_main']].agg(per_emacs)
+
+#^ Multiple Aggregations
+
+# jb2.pivot_table(index='country_live', values = 'age', aggfunc= ('min', 'max'), observed=True)
+
+
+## groupby() method will take age column, apply aggregate method to find min and max values against each country and tabulate them.
+
+# jb2.groupby('country_live', observed=True)\
+#    .age \
+#    .agg(['min', 'max'])
+
+#^ per column aggregations
+
+# jb2.pivot_table(index='country_live',aggfunc=('min', 'max'), observed=True)
+
+
+# jb2.groupby('country_live', observed=False)\
+#    .agg(['min', 'max'])
+
+jb2.pivot_table(index='country_live', aggfunc={'age':['min','max'],'team_size': 'mean'}, observed=True)
+ 
+jb2.groupby('country_live', observed=True).agg({'age': ['min','max'],'team_size': 'mean'})
+ 
+
+## Following feature called named aggregations, will return a flatten column name.
+jb2.groupby('country_live', observed=True).agg(age_min=('age','min'), age_max =('age','max'),team_size=('team_size','mean'))
+
+#^ Grouping by Hierarchy
+
+## Here, two different indexes are applied and aggregates (min, max) is applied on each of 'ide_main' for each country.
+
+jb2.pivot_table(index=['country_live', 'ide_main'],values='age', aggfunc=['min', 'max'], observed=True)
+
+
+jb2.groupby(by=['country_live', 'ide_main'],observed=True)[['age']].agg(['min','max'])\
+.swaplevel(axis='columns')
+
+
+## observed = True will remove missing value rows
+jb2.groupby(by=['country_live', 'ide_main'],observed=True).agg(age_min=('age','min'), age_max=('age','max'))
+
+#^ Grouping with functions
+
+def even_grouper(idx):
+    return 'odd' if idx % 2 else 'even'
+
+## Here we group based on whether the index is even or odd. We then calculate the size of each group.
+
+jb2.pivot_table(index=even_grouper,aggfunc='size')
+
+
+jb2.groupby(even_grouper).size()
+

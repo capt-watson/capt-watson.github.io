@@ -110,5 +110,3 @@ def tweak_jb(jb):
         .assign(team_size = lambda df_: predict_col(df_, 'team_size').astype(int))
         .drop(columns=['python2_version_most'])
         .dropna())
-    
-jb2 = tweak_jb()

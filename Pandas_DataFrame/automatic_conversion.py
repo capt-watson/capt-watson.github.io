@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-from pandas import DataFrame, Series
 
 pd.options.display.max_rows = 999
 pd.set_option('display.max_rows',999)

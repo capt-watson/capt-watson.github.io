@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 
 url = 'https://github.com//mattharrison/datasets/raw/master/data/vehicles.csv.zip'

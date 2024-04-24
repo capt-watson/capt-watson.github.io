@@ -97,11 +97,11 @@ flavors = ['vanilla', 'chocolate', 'strawberry']
 
 # randint(1,6)
 
-players = ['charles', 'martina', 'michael', 'florence', 'betty']
+# players = ['charles', 'martina', 'michael', 'florence', 'betty']
 
-first_up = choices(players)  #! This function takes in a list or tuple and returns a randomly chosen element:
+# first_up = choices(players)  #! This function takes in a list or tuple and returns a randomly chosen element:
 
-first_up
+# first_up
 
 # class Die:
 #     def __init__(self, sides):
@@ -135,27 +135,27 @@ first_up
 #~ 6  1  19
 #~ 1  4  16
 
-lottery = ('s', 9, 4, 'g', 5, 'y', 8, 18, 'u', 'r', 7, 6, 59, 'q', 'e')
+# lottery = ('s', 9, 4, 'g', 5, 'y', 8, 18, 'u', 'r', 7, 6, 59, 'q', 'e')
 
-num = choices(lottery, k=4)
+# num = choices(lottery, k=4)
 
-# print("Today's winning number is:", num )
+# # print("Today's winning number is:", num )
 
-# for i in num:
-#     print(i, end = ' ')
+# # for i in num:
+# #     print(i, end = ' ')
 
-wt = ['r', 'g', 'q', 9]
+# wt = ['r', 'g', 'q', 9]
 
-count = 0
+# count = 0
 
-flag = True
+# flag = True
 
-while flag:
-    num = choices(lottery, k=4)
-    count += 1
-    if wt == num:
-        print(f"Winning number found in {count} attempts.")
-        flag = False
+# while flag:
+#     num = choices(lottery, k=4)
+#     count += 1
+#     if wt == num:
+#         print(f"Winning number found in {count} attempts.")
+#         flag = False
 
-#~ Winning number found in 37024 attempts.
+# #~ Winning number found in 37024 attempts.
 

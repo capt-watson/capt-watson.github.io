@@ -37,4 +37,4 @@ pd.crosstab(index=[jb2.country_live, jb2.age], columns=[jb2.use_python_most, jb2
 
 pd.crosstab(index=[jb2.country_live, jb2.age], columns=[jb2.use_python_most, jb2.python3_version_most]).loc[['United States'], ['Data analysis', 'Web development']].style.background_gradient(cmap='viridis', axis=None)
             
-## The above heatmap shows that the Python 3.8 is the most popular and popular age is 30    
+## The above heatmap shows that the Python 3.8 is the most popular and popular age is 30

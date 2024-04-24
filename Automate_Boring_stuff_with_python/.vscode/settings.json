@@ -1,0 +1,7 @@
+{
+    "workbench.editor.autoLockGroups": {
+        "jupyter-notebook": true,
+        "terminalEditor": false,
+        "workbench.input.interactive": true,
+    }
+}

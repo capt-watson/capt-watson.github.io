@@ -39,12 +39,12 @@
 # print(b)
 
 # d = {
-# 'aeinstein': {
+# 'einstein': {
 # 'first': 'albert',
 # 'last': 'einstein',
 # 'location': 'princeton',
 # },
-# 'mcurie': {
+# 'm-curie': {
 # 'first': 'marie',
 # 'last': 'curie',
 # 'location': 'paris',
@@ -255,7 +255,7 @@
 #         person['age'] = age     ## Will assign age value to the person key = age
 #     return person
 
-# musician = build_person('jimi', 'hendrix', age=27)
+# musician = build_person('rachel', 'hendrix', age=27)
 # print(musician)
 
 # unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']

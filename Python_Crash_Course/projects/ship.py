@@ -1,8 +1,10 @@
 import pygame
+from pygame.sprite import Sprite  ## To create a group of ships
 
-class Ship:
+class Ship(Sprite):
     def __init__(self, ai_game):
         """Initialize the ship and see its starting position"""
+        super().__init__()
         self.screen = ai_game.screen
         self.settings = ai_game.settings
         self.screen_rect = ai_game.screen.get_rect()       ## creates an invisible as a boundary around screen's edge

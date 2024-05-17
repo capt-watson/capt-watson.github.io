@@ -1,3 +1,4 @@
+from functools import reduce
 
 #@ Defining a function
 
@@ -470,19 +471,19 @@
 ## taking help of intermediate pole B
 
 
-def towers(n, start, end, aux):
-    print(f' DEBUG: starting hanoi ({n}, {start}, {aux}, {end})')    
-    ## towers(n, source, destination, auxillary)
-    if n==1:            #* This is known as base case
-        print(' Move disk %i from pole %s to pole %s' % (n,start,end))
-    else:
-        towers(n-1,start,aux,end)
-        print('Move disk %i from pole %s to pole %s' % (n, start, end))
-        towers(n-1, aux,end,start)
-    print(f'DEBUG: Exiting hanoi ({n}, {start}, {end}, {aux})')     
+# def towers(n, start, end, aux):
+#     print(f' DEBUG: starting hanoi ({n}, {start}, {aux}, {end})')    
+#     ## towers(n, source, destination, auxillary)
+#     if n==1:            #* This is known as base case
+#         print(' Move disk %i from pole %s to pole %s' % (n,start,end))
+#     else:
+#         towers(n-1,start,aux,end)
+#         print('Move disk %i from pole %s to pole %s' % (n, start, end))
+#         towers(n-1, aux,end,start)
+#     print(f'DEBUG: Exiting hanoi ({n}, {start}, {end}, {aux})')     
 
-n = int(input('Enter number of disks: '))
-towers(n, 'Start', 'End', 'Aux')  ## call the function
+# n = int(input('Enter number of disks: '))
+# towers(n, 'Start', 'End', 'Aux')  ## call the function
  
 #!  Move disk 1 from pole Start to pole End
 #! Move disk 2 from pole Start to pole Aux

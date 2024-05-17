@@ -1,0 +1,15 @@
+{% extends 'learning_logs/base.html' %}
+
+{% block content %}
+
+  <p>Add a new Topic</p>
+
+  <form section="{% url 'learning_logs:new_topic' %}" method="post">  <!--Tells browser where to send the data submitted in the form. Here it is view function-->
+    {% csrf_token %}        <!--Django uses template tag {% csrf_token %} to prevent attackers using form to gain unauthorized access to server.-->
+    {{ form.as_div }}       <!--This form is displayed to user and completed form is returned back to the views function using POST-->
+    <button name="submit">Add Topic</button>    <!--As Django doesn't create a submit button, we define one before closing form-->
+  </form>
+
+{% endblock content %}
+
+<!-- .as.div modifier tells django to render all the form elements as HTML <div></div> elements-->

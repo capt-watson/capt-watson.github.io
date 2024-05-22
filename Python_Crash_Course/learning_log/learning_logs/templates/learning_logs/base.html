@@ -1,19 +1,63 @@
-<p>
-  <a href="{% url 'learning_logs:index' %}">Learning Log</a> -
-  <a href="{% url 'learning_logs:topics' %}">Topics</a> -
-  {% if user.is_authenticated %}
-    Hello, {{ user.username }}.
-  {% else %}
-    <a href="{% url 'accounts:register' %}">Register</a>
-    <a href="{% url 'accounts:login' %}">Log in</a>
-  {% endif %}
-</p>
-{% block content %}{% endblock content %}
+<!doctype html>                             <!--File type declared as HTML-->
+<html lang="en" data-bs-theme="dark">        <!--file written in English language. data-bs-theme="dark" changes screen to dark mode-->
+<head>                  <!--Head of HTML doesn't hold page's content , it tells browser what it needs to know to display page correctly.-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning Log</title>
 
-{% if user.is_authenticated %}
-  <hr />                        <!--Draws horizontal line with break-->
-<form action="{% url 'accounts:logout' %}" method="post">
-  {% csrf_token %}
-  <button name='submit'>Log out</button>
-</form>
-{% endif %}
+  {% load django_bootstrap5 %}      <!--custom tag from django-bootstrap5 to load all of CSS files required to implement bootstrap style-->
+  {% bootstrap_css %}               <!--Loads all bootstrap_css interactive behavior-->
+  {% bootstrap_javascript %}
+</head>                             <!--All bootstrap styling options are now available in any template that inherits from base.html-->
+
+<body>                              <!--Body contains what user will see on a page-->
+  <nav class = "navbar navbar-expand-md navbar-dark mb-4 border" style="background-color:darkcyan"> <!--md= medium, mb=margin bottom 4 pixels -->
+    <div class="container-fluid">   <!--Resizable container to hold nav bar. Div divides body into sections-->
+      <a class="navbar-brand" href="{% url 'learning_logs:index' %}"><strong>Learning Log</strong></a>  <!--brand gives some branding to the link to stand out-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>   <!--Hamburger icon-->
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">        <!--me-auto class is used to align the element to the left of its parent element.-->
+          <li class="nav-item">
+            <a class="nav-link text-light" href="{% url 'learning_logs:topics' %}">Topics</a>
+          </li>
+        </ul>   <!--End of link on left side of navbar-->
+        <!--Account related links-->
+        <ul class="navbar-nav ms-auto mb-2 mb-md-0">     <!--mb-2 margin from left 2rem--> 
+          {% if user.is_authenticated %}
+            <li class="nav-item">
+              <span class="navbar-text text-light me-2">Hello, {{ user.username }}</span>  <!--me-2 margin 2rem from right edge-->
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link text-light" href="{% url 'accounts:register' %}">Register</a>  <!--Will show registration template-->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="{% url 'accounts:login' %}">Log In</a>       <!--Will show Login template-->
+            </li>
+          {% endif %}
+        </ul>   <!--End of account related links-->
+        {% if user.is_authenticated %}
+          <form action="{% url 'accounts:logout' %}" method="post">
+            {% csrf_token %}
+            <button name="submit" class="btn btn-outline-light btn-sm">Log Out</button>           <!--Will show Log Out button-->
+          </form>
+        {% endif %}
+      </div>    <!--Closes collapsible parts of navbar-->
+    </div>      <!--Closes navbar's container-->
+  </nav>        <!--End of navbar-->
+  <main class="container">
+    <div class="pb-2 mb-2 border-bottom">
+      {% block page_header %}{% endblock page_header %}
+    </div>
+    <div>
+      {% block content %} {% endblock content %}
+    </div>
+  </main>
+</body>
+</html>
+
+<!--mb-2 adds a bottom margin of 2rem to the element. Rem unit means "The root element's font-size" (rem stands for "root em"). The <li> elements inside the <ul> with a class of rems take their sizing from the root element ( <html> ). This means that each successive level of nesting does not keep getting larger.
+mb-md-0 class is used to remove the bottom margin of the element when the screen size is medium or larger-->

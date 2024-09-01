@@ -87,4 +87,3 @@ def edit_entry(request, entry_id):
     return render(request, 'learning_logs/edit_entry.html', context)        
 
 ## View func() takes in info from request, prepares data needed to generate a page with help of a template, and then sends the data back to the browser.
-

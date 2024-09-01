@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     ## Third party apps
     'django_bootstrap5',
     
+    
     ## Default django apps.
     'django.contrib.admin',
     'django.contrib.auth',
@@ -76,6 +77,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'll_project.wsgi.application'
+
 
 
 # Database
@@ -133,3 +135,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'learning_logs:index'
 LOGOUT_REDIRECT_URL = 'learning_logs:index'
 LOGIN_URL = 'accounts:login'
+
